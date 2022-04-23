@@ -75,10 +75,11 @@ public class SignUp_Activity extends AppCompatActivity {
                             progressDialog.dismiss();
 
                             if (task.isSuccessful()) {
-                                /* use of Users class we have made in models package */
+                                /* use of Users class we have made */
                                 Users user = new Users(etUsername.getText().toString(), etEmail.getText().toString(), auth.getUid());
 
-                                database.getReference().child("Users").child(Objects.requireNonNull(auth.getUid())).setValue(user); // Creating a node named 'Users' in which data of diff user will be stored who create account
+                                // Creating a node named 'Users' in which data of diff user will be stored who create account
+                                database.getReference().child("Users").child(Objects.requireNonNull(auth.getUid())).setValue(user);
                                 Toast.makeText(SignUp_Activity.this, "Account created Successfully", Toast.LENGTH_SHORT).show();
                                 Intent i = new Intent(SignUp_Activity.this , MainActivity.class);
                                 startActivity(i);

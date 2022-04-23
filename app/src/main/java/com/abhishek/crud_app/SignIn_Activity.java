@@ -48,7 +48,7 @@ public class SignIn_Activity extends AppCompatActivity {
         //      code for progress dialog
         progressDialog = new ProgressDialog(SignIn_Activity.this);
         progressDialog.setTitle("Login");
-        progressDialog.setMessage("Logging in into the account");
+        progressDialog.setMessage("Logging into the account");
 
         tvCreateaccount.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,7 +65,6 @@ public class SignIn_Activity extends AppCompatActivity {
                 if(TextUtils.isEmpty(etEmail_signin.getText().toString()) || TextUtils.isEmpty(etPassword_signin.getText().toString())){
                     progressDialog.dismiss();
                     Toast.makeText(SignIn_Activity.this, "Please enter your credentials", Toast.LENGTH_SHORT).show();
-                    return;
                 }
                 else {
                     auth.signInWithEmailAndPassword
