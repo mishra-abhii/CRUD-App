@@ -89,7 +89,7 @@ public class SignIn_Activity extends AppCompatActivity {
         });
 
 //========================================================================================================
-
+//    code to check if user is already logged in or not
         if(auth.getCurrentUser()!=null){
             Intent intent = new Intent(SignIn_Activity.this , MainActivity.class);
             startActivity(intent);

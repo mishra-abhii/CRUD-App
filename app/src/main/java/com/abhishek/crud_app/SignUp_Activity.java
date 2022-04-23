@@ -34,7 +34,7 @@ public class SignUp_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        Objects.requireNonNull(getSupportActionBar()).hide(); /* To remove action bar form this particular activity as by default it is set for all activity*/
+        Objects.requireNonNull(getSupportActionBar()).hide();
         etUsername = findViewById(R.id.etUsername);
         etEmail = findViewById(R.id.etEmail);
         etPassword = findViewById(R.id.etPassword);
@@ -44,7 +44,7 @@ public class SignUp_Activity extends AppCompatActivity {
 
 
         auth = FirebaseAuth.getInstance();    /* this will be used to take email and password and sign up */
-        database = FirebaseDatabase.getInstance();   /* this will helps us to save values given in the editTexts  */
+        database = FirebaseDatabase.getInstance();
 
 //      code for progress dialog
         progressDialog = new ProgressDialog(SignUp_Activity.this);
